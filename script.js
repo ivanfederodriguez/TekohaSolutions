@@ -1,5 +1,5 @@
 // ===========================
-// Tekoha Solutions — Main JS
+// Kanoo Software — Main JS
 // ===========================
 
 document.addEventListener('DOMContentLoaded', () => {
