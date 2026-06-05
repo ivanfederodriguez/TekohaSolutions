@@ -84,7 +84,7 @@ function initScrollAnimations() {
                 entry.target.classList.add('visible');
                 
                 // Stagger children if they exist
-                const children = entry.target.querySelectorAll('.service-card, .solution-item, .testimonial-card, .process-step');
+                const children = entry.target.querySelectorAll('.service-card, .solution-item, .testimonial-card, .process-step, .module-card, .platform-card');
                 children.forEach((child, index) => {
                     child.style.transitionDelay = `${index * 0.1}s`;
                     child.classList.add('visible');

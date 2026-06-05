@@ -1522,6 +1522,469 @@ img {
 
 
 /* =====================
+   KANOO CLUBES
+   ===================== */
+.kanoo-clubes {
+    padding: var(--section-padding) 0;
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.kanoo-clubes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--warm-gray-200), transparent);
+}
+
+.clubes-overview {
+    max-width: 760px;
+    margin: -40px auto 64px;
+    text-align: center;
+}
+
+.clubes-lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.clubes-platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.platform-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.platform-card--reverse .platform-visual {
+    order: 2;
+}
+
+.platform-card--reverse .platform-content {
+    order: 1;
+}
+
+.platform-badge {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-primary);
+    background: var(--gradient-warm-soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+.platform-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.platform-content > p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+.platform-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.platform-features li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.platform-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-warm);
+    border-radius: 50%;
+}
+
+/* Phone mockup — generic Kanoo palette */
+.phone-mockup {
+    width: 260px;
+    margin: 0 auto;
+    background: var(--warm-gray-900);
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow: var(--shadow-xl);
+    border: 3px solid var(--warm-gray-800);
+}
+
+.phone-notch {
+    width: 80px;
+    height: 6px;
+    background: var(--warm-gray-700);
+    border-radius: 100px;
+    margin: 0 auto 8px;
+}
+
+.phone-screen {
+    background: var(--bg-primary);
+    border-radius: 24px;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-header {
+    padding: 16px;
+    background: var(--gradient-warm-soft);
+    display: flex;
+    justify-content: center;
+}
+
+.phone-logo-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gradient-warm);
+    opacity: 0.6;
+}
+
+.phone-greeting {
+    padding: 16px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-line {
+    height: 10px;
+    background: var(--warm-gray-200);
+    border-radius: 6px;
+}
+
+.phone-line--short { width: 40%; }
+.phone-line--medium { width: 65%; }
+
+.phone-card {
+    margin: 8px 16px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: var(--warm-gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone-card--accent {
+    background: var(--gradient-warm-soft);
+    border: 1px solid rgba(224, 90, 58, 0.15);
+}
+
+.phone-card-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.phone-card-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.phone-quick-actions {
+    display: flex;
+    gap: 10px;
+    padding: 12px 16px;
+}
+
+.phone-action {
+    flex: 1;
+    height: 52px;
+    background: var(--warm-gray-100);
+    border-radius: var(--radius-sm);
+}
+
+.phone-list {
+    flex: 1;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-list-item {
+    height: 44px;
+    background: var(--warm-gray-100);
+    border-radius: var(--radius-sm);
+}
+
+.phone-tabbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 8px 16px;
+    border-top: 1px solid var(--warm-gray-200);
+    background: var(--bg-primary);
+}
+
+.phone-tab {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--warm-gray-200);
+}
+
+.phone-tab--active {
+    background: var(--gradient-warm);
+}
+
+/* Admin mockup — generic Kanoo palette */
+.admin-mockup {
+    display: flex;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--warm-gray-200);
+    min-height: 320px;
+}
+
+.admin-sidebar {
+    width: 56px;
+    background: var(--warm-gray-900);
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.admin-sidebar-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--gradient-warm);
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+
+.admin-sidebar-item {
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar-item--active {
+    background: var(--accent-primary);
+    opacity: 0.85;
+}
+
+.admin-sidebar-spacer {
+    flex: 1;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-topbar-title {
+    width: 100px;
+    height: 14px;
+    background: var(--warm-gray-200);
+    border-radius: 6px;
+}
+
+.admin-topbar-actions {
+    width: 60px;
+    height: 24px;
+    background: var(--warm-gray-100);
+    border-radius: 6px;
+}
+
+.admin-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.admin-kpi {
+    height: 56px;
+    background: var(--warm-gray-100);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--warm-gray-200);
+}
+
+.admin-kpi--highlight {
+    background: var(--gradient-warm-soft);
+    border-color: rgba(224, 90, 58, 0.2);
+}
+
+.admin-charts {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 10px;
+}
+
+.admin-chart {
+    background: var(--warm-gray-50);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--warm-gray-200);
+    min-height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-chart::after {
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    height: 60%;
+    background: linear-gradient(to top, rgba(224, 90, 58, 0.15) 0%, transparent 100%);
+    border-radius: 4px 4px 0 0;
+}
+
+.admin-chart--small::after {
+    height: 40%;
+    background: linear-gradient(to top, rgba(245, 158, 11, 0.2) 0%, transparent 100%);
+}
+
+/* Modules grid */
+.clubes-modules {
+    margin-bottom: 64px;
+}
+
+.clubes-modules-title {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.module-card {
+    background: var(--bg-secondary);
+    padding: 28px 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--warm-gray-200);
+    transition: all var(--transition-base);
+}
+
+.module-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+.module-icon {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.module-card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.module-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Benefits */
+.clubes-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+    padding: 40px;
+    background: var(--gradient-warm-soft);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(224, 90, 58, 0.1);
+}
+
+.benefit-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.benefit-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+}
+
+.benefit-item h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* CTA */
+.clubes-cta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.clubes-cta p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+}
+
+
+/* =====================
    RESPONSIVE
    ===================== */
 @media (max-width: 1024px) {
@@ -1581,6 +2044,28 @@ img {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .platform-card,
+    .platform-card--reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card--reverse .platform-visual,
+    .platform-card--reverse .platform-content {
+        order: unset;
+    }
+
+    .modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clubes-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-kpis {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
@@ -1666,6 +2151,18 @@ img {
     }
 
     .contact-form-wrapper {
+        padding: 24px;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-charts {
+        grid-template-columns: 1fr;
+    }
+
+    .clubes-benefits {
         padding: 24px;
     }
 
